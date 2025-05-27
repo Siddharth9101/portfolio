@@ -9,7 +9,7 @@ const ProjectsSection = () => {
     const req = async () => {
       try {
         setLoading(true);
-        const url = `${import.meta.env.VITE_BACKEND_URL}projects`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/projects`;
         const result = await axios.get(url);
         setProjects(result.data);
       } catch (error) {
@@ -25,7 +25,6 @@ const ProjectsSection = () => {
 
   return (
     <section className=" px-8 py-20 text-white" id="projects">
-      {console.log(projects)}
       <div className="w-full flex flex-col items-center">
         {/* Section Heading */}
         <h2 className="text-4xl font-bold mb-2">Projects</h2>
@@ -38,14 +37,16 @@ const ProjectsSection = () => {
         {/* Project Card */}
         {projects.map((project, i) => (
           <div
-            key={i}
-            className={`flex my-2 flex-col md:flex-row ${
+            key={project._id}
+            className={`flex my-2 flex-col md:flex-row border border-gray-800 rounded p-2 shadow ${
               i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             } items-center gap-10 w-full`}
           >
             {/* Project Info */}
             <div className="md:w-1/2 space-y-4">
-              <h3 className="text-2xl font-semibold">{project.title}</h3>
+              <h3 className="text-xl md:text-2xl font-semibold">
+                {project.title}
+              </h3>
 
               {/* Tech Stack Pills */}
               <div className="flex flex-wrap gap-3 text-sm">
@@ -63,7 +64,7 @@ const ProjectsSection = () => {
               <p className="text-gray-300">{project.description}</p>
 
               {/* Buttons */}
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row gap-4 text-center">
                 <Link
                   to={project.githubUrl}
                   target="_blank"
@@ -80,7 +81,6 @@ const ProjectsSection = () => {
                 </Link>
               </div>
             </div>
-
             {/* Project Image */}
             <div className="md:w-1/2 border border-white/50">
               <img

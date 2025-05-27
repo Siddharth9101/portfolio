@@ -3,23 +3,23 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <div className=" overflow-hidden">
-      <section className="flex flex-col md:flex-row items-center justify-between px-10 py-20 text-white">
+    <div className="overflow-hidden">
+      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-20 text-white">
         <div className="max-w-xl space-y-6">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-3xl md:text-5xl font-bold">
             Hello<span className="text-orange-500">.</span>
           </h1>
           <div className="flex gap-4 items-center">
             <div className="h-1 md:w-[100px] w-[50px] bg-orange-500" />
-            <h2 className="text-2xl">
+            <h2 className="text-xl md:text-2xl">
               I'm{" "}
               <span className="text-white font-medium">Siddharth Saxena</span>
             </h2>
           </div>
-          <h3 className="text-4xl font-bold">Software Developer</h3>
-          <div className="space-x-4 mt-6">
+          <h3 className="text-3xl md:text-4xl font-bold">Software Developer</h3>
+          <div className="flex justify-around items-center mt-6">
             <button
-              className="bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600"
+              className="bg-orange-500 text-white text-sm md:text-base px-4 md:px-6 py-3 rounded hover:bg-orange-600"
               onClick={() => {
                 const contactSection = document.querySelector("#contact");
                 if (contactSection) {
@@ -30,7 +30,7 @@ const Hero = () => {
               Got a project?
             </button>
             <button
-              className="border border-white px-6 py-3 rounded hover:bg-white hover:text-black"
+              className="border border-white text-sm md:text-base px-4  md:px-6 py-3 rounded hover:bg-white hover:text-black"
               onClick={() => {
                 // Create a temporary <a> element to trigger download
                 const link = document.createElement("a");

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className=" text-white py-8 text-center mt-10">
       <h4 className="text-xl font-semibold">Siddharth Saxena</h4>
       <p className="text-sm mt-2">
-        Designed with love, all rights reserved for Siddharth Saxena.
+        All rights reserved &copy; {new Date().getFullYear()}{" "}
       </p>
 
       <div className="flex justify-center gap-6 mt-4 text-2xl">

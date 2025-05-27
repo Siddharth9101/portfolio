@@ -28,7 +28,7 @@ export default function AdminProjectForm() {
 
     try {
       const baseURL = import.meta.env.VITE_BACKEND_URL;
-      const result = await axios.post(`${baseURL}projects`, formData, {
+      const result = await axios.post(`${baseURL}/api/projects`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

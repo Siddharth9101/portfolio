@@ -34,8 +34,8 @@ const Hero = () => {
               onClick={() => {
                 // Create a temporary <a> element to trigger download
                 const link = document.createElement("a");
-                link.href = "/resume.pdf"; // path relative to public folder
-                link.download = "resume.pdf";
+                link.href = "/Siddharth Saxena.pdf"; // path relative to public folder
+                link.download = "Siddharth Saxena.pdf";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);

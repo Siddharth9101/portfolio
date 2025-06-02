@@ -46,7 +46,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-wrap gap-6">
+      <div className="flex md:justify-center justify-between px-6 flex-wrap md:gap-6 gap-3">
         {skills.map((skill, index) => (
           <div
             key={index}

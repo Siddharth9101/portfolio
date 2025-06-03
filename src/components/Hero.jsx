@@ -32,9 +32,8 @@ const Hero = () => {
             <button
               className="border border-white text-sm md:text-base px-4  md:px-6 py-3 rounded hover:bg-white hover:text-black"
               onClick={() => {
-                // Create a temporary <a> element to trigger download
                 const link = document.createElement("a");
-                link.href = "/Siddharth Saxena.pdf"; // path relative to public folder
+                link.href = "/Siddharth Saxena.pdf";
                 link.download = "Siddharth Saxena.pdf";
                 document.body.appendChild(link);
                 link.click();

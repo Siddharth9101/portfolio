@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <div className="text-white space-y-6">
+    <div className="container text-white space-y-6">
       <h2 className="text-3xl font-bold">About me</h2>
       <p className="text-gray-300 max-w-lg">
         I am a software developer with a passion for creating innovative and

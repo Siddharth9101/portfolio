@@ -3,7 +3,7 @@ import AboutMe from "./AboutMe";
 
 const AboutSection = () => {
   return (
-    <section className=" px-8 py-20" id="about">
+    <section className="px-8 py-20">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16">
         <div className="md:w-1/2">
           <Services />

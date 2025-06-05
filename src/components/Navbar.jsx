@@ -1,8 +1,29 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useGSAP(() => {
+    gsap.from(".logo", {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+    });
+    gsap.from(".hamburger", {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+    });
+    gsap.from(".desktop-link", {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+    });
+  });
 
   const navlinks = [
     { label: "Home", to: "#home" },
@@ -16,14 +37,14 @@ const Navbar = () => {
       className="w-full px-10 py-4 flex justify-between items-center text-white z-50 relative"
       id="home"
     >
-      <div className="text-white text-2xl font-semibold uppercase">
+      <div className="logo text-white text-2xl font-semibold uppercase">
         Portfolio
       </div>
 
       {/* Desktop Nav */}
-      <nav className="md:flex hidden justify-end space-x-8 text-lg">
+      <nav className="desktopNav md:flex hidden justify-end space-x-8 text-lg">
         {navlinks.map((item, idx) => (
-          <a href={item.to} key={idx}>
+          <a className="desktop-link" href={item.to} key={idx}>
             <div className="group relative cursor-pointer overflow-hidden">
               <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[100%]">
                 {item.label}
@@ -37,7 +58,7 @@ const Navbar = () => {
       </nav>
 
       {/* Hamburger Icon for Mobile */}
-      <div className="md:hidden block">
+      <div className="hamburger md:hidden block">
         <button onClick={() => setIsOpen(true)}>
           <HiMenu size={28} />
         </button>

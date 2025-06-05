@@ -50,7 +50,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex gap-2 py-2 px-4 rounded-full bg-amber-600 items-center justify-center shadow shadow-white/30 hover:bg-amber-500 transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+            className="capsule transform-origin-center flex gap-2 py-2 px-4 rounded-full bg-amber-600 items-center justify-center shadow shadow-white/30 hover:bg-amber-500 transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
           >
             <span className="text-xl md:text-2xl text-white">{skill.icon}</span>
             <span className="text-white">{skill.name}</span>
